@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoL Items</title>
+    <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="./index.js"></script>
+    <script type="text/javascript" src="./items.js"></script>
+</head>
+<body>
+    <div class="stats_selector">
+        <div class="patch">
+            <ul>
+                <li id="patch_title">PATCH: 12.10</li>
+                <li id="patch_notes"><a href="https://www.leagueoflegends.com/en-us/news/game-updates/patch-12-10-notes/" target="_blank">Patch notes</a></li>
+            </ul>
+        </div>
+        <div class="stats_selector_rows">
+            <div id="stats_selector_ad">
+                <ul>
+                    <li id="ad1"><img src="./assets/stats/ad.png">&nbsp;&nbsp;Attack Damage</li>
+                    <li><img src="./assets/stats/crit.png">&nbsp;&nbsp;Crit Chance</li>
+                    <li><img src="./assets/stats/attack_speed.png">&nbsp;&nbsp;Attack Speed</li>
+                    <li><img src="./assets/stats/armor_pen.png">&nbsp;&nbsp;Armon Penetration</li>
+                </ul>
+            </div>
+            <div id="stats_selector_ap">
+                <ul>
+                    <li><img src="./assets/stats/ap.png">&nbsp;&nbsp;Ability Power</li>
+                    <li><img src="./assets/stats/mana.png">&nbsp;&nbsp;Mana</li>
+                    <li><img src="./assets/stats/magic_pen.png">&nbsp;&nbsp;Magic Penetration</li>
+                </ul>
+            </div>
+            <div id="stats_selector_tank">
+                <ul>
+                    <li><img src="./assets/stats/hp.png">&nbsp;&nbsp;Health</li>
+                    <li><img src="./assets/stats/armor.png">&nbsp;&nbsp;Armor</li>
+                    <li><img src="./assets/stats/mr.png">&nbsp;&nbsp;Magic Resist</li>
+                </ul>
+            </div>
+            <div id="stats_selector_msc">
+                <ul>
+                    <li><img src="./assets/stats/ah.png">&nbsp;Ability Haste</li>
+                    <li><img src="./assets/stats/move_speed.png">&nbsp;Move Speed</li>
+                    <li><img src="./assets/stats/vamp.png">&nbsp;Vamp</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="items_column">
+        <div class="search_bar">
+            <input type="text" placeholder="Search..." value>
+        </div>
+        <div class="roll_selector">
+            Roll selector
+        </div>
+        <div class="mythic_items">
+            <div class="description">
+                Title
+            </div>
+            <div class="mythic_items_icons" id="gen_mythic"><script>generate_mythic_items()</script></div>
+        </div>
+    </div>
+    <div class="stats_display">
+
+    </div> 
+</body>
+</html>

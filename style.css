@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@300&display=swap');
+
+html{
+    background-color: #0c1620;
+}
+
+body{
+    display: grid;
+    grid-template-columns: 300px auto auto;
+    padding: 0px 100px;
+    grid-gap: 10px;
+}
+
+.stats_selector{
+    height: 100%;
+    padding: 30px 0px;
+    display: grid;
+}
+
+.stats_selector img{
+    height: 20px;
+}
+
+.stats_selector ul{
+    list-style: none;
+}
+
+#patch_title {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 25px;
+    color: #ccffff;
+}
+
+#patch_notes a{
+    text-decoration: none;
+    font-family: 'Archivo Black', sans-serif;
+    color: #169C8E;
+}
+
+#patch_notes a:hover{
+    color: #35FFEA;
+    text-shadow: 5px 5px 5px#000000;
+}
+
+.stats_selector_rows{
+    width: 260px;
+    height: 638px;
+    padding-bottom: 0px;
+    margin-top: 20px;
+    color: #2f5b85;
+    font-size: 15px;
+    font-family: 'Archivo', sans-serif;
+    transition: color 0.3s;
+    border-right: 1px solid #344754;
+}
+
+.stats_selector_rows ul{
+    width: 180px;
+    margin-left: 80px;
+    padding-left: 0px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #344754;
+}
+
+.stats_selector_rows li{
+    padding: 10px 0px;
+}
+
+#ad1{
+    padding-top: 0px;
+}
+
+.stats_selector_rows li:hover{
+    color: #93b2c6;
+    cursor: pointer;
+}
+
+#stats_selector_ad ul{
+    margin-top: 0px;
+}
+
+.items_column{
+    display: grid;
+    grid-template-rows: 90px 30px;
+}
+
+.search_bar input{
+    margin-top: 20px;
+    width: 100%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 1%;
+    padding-right: 12%;
+    background-color: #0c1620;
+    color: #FFFFFF;
+    border: none;
+    font-size: 17px;
+}
+
+.mythic_items{
+    display: grid;
+    grid-template-rows: 70px;
+}
+
+.mythic_items_icons img{
+    height: 50px;
+    padding: 2px;
+    border: 2px inset #CFA91A;
+}
+
+.mythic_items_icons{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.mythic_icon{
+    display: grid;
+    grid-template-rows: 68px 20px;
+    height: 88px;
+    text-align: center;
+    font-family: 'Archivo Black', sans-serif;
+    color: #8d7622;
+}
+
+.mythic_icon img:hover{
+    cursor: pointer;
+}
