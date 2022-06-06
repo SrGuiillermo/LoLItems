@@ -1,27 +1,3 @@
-const filter = []
-
-const data = {
-    current_patch : "12.10.1",
-}
-
-const stats_template = {
-    ad : "Attack Damage: ",
-    crit : "Critical Strike Chance: ",
-    as : "Attack Speed: ",
-    armor_pen : "Armor Penetration: ",
-    lethality : "Lethality: ",
-    ap : "Ability Power: ",
-    mana : "Mana: ",
-    magic_pen : "Magic Penetration: ",
-    hp : "Health: ",
-    armor : "Armor: ",
-    mr : "Magic Resist: ",
-    haste : "Ability Haste: ",
-    mana_regen : "Mana Regeneration: ",
-    ms : "Move Speed: ",
-    omnivamp : "Omnivamp: ",
-}
-
 const items = {
     mythic_items : {
         shurelyas_battlesong : {

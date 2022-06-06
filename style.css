@@ -24,6 +24,11 @@ body{
 
 .stats_selector ul{
     list-style: none;
+    margin-left: 0px;
+}
+
+.stats_selector_rows img{
+    padding-top: 4px;
 }
 
 #patch_title {
@@ -45,7 +50,7 @@ body{
 
 .stats_selector_rows{
     width: 260px;
-    height: 724px;
+    height: 794px;
     padding-bottom: 0px;
     color: #2f5b85;
     font-size: 15px;
@@ -63,14 +68,11 @@ body{
 }
 
 .stats_selector_rows li{
-    padding: 10px 0px;
-}
-
-#ad_filter{
-    padding-top: 0px;
+    padding: 10px 7px;
 }
 
 .stats_selector_rows li:hover{
+    background-color: #182d41;
     box-shadow: 2px 4px #000000;
     color: #93b2c6;
     cursor: pointer;
@@ -81,12 +83,16 @@ body{
 }
 
 .items_column{
+    margin-top: 20px;
     display: grid;
-    grid-template-rows: 90px 30px;
+    grid-template-rows: 90px 80px;
+}
+
+.search_bar{
+    height: 54px;
 }
 
 #search_bar_in{
-    margin-top: 20px;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
@@ -100,6 +106,37 @@ body{
 #search_bar_in:focus{
     outline: none;
 }
+
+.roll_selector{
+    height: max-content;
+    color: #2f5b85;
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto;
+}
+
+.roll{
+    height: max-content;
+    width: max-content;
+    padding: 8px 8px;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+.roll:hover{
+    background-color: #182d41;
+    box-shadow: 2px 4px #000000;
+    color: #93b2c6;
+    cursor: pointer;
+}
+
+.roll_txt{
+    padding-top: 4px;
+    padding-left: 14px;
+}
+
+.roll_selector img{
+    height: 25px;
+}   
 
 .mythic_items{
     display: grid;
