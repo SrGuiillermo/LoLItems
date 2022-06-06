@@ -7,7 +7,7 @@ html{
 
 body{
     display: grid;
-    grid-template-columns: 300px auto auto;
+    grid-template-columns: 300px 50% auto;
     padding: 0px 100px;
     grid-gap: 10px;
 }
@@ -45,9 +45,8 @@ body{
 
 .stats_selector_rows{
     width: 260px;
-    height: 638px;
+    height: 724px;
     padding-bottom: 0px;
-    margin-top: 20px;
     color: #2f5b85;
     font-size: 15px;
     font-family: 'Archivo', sans-serif;
@@ -67,11 +66,12 @@ body{
     padding: 10px 0px;
 }
 
-#ad1{
+#ad_filter{
     padding-top: 0px;
 }
 
 .stats_selector_rows li:hover{
+    box-shadow: 2px 4px #000000;
     color: #93b2c6;
     cursor: pointer;
 }
@@ -85,22 +85,33 @@ body{
     grid-template-rows: 90px 30px;
 }
 
-.search_bar input{
+#search_bar_in{
     margin-top: 20px;
     width: 100%;
     padding-top: 15px;
     padding-bottom: 15px;
-    padding-left: 1%;
-    padding-right: 12%;
     background-color: #0c1620;
     color: #FFFFFF;
     border: none;
     font-size: 17px;
+    border: 2px inset #CFA91A;
+}
+
+#search_bar_in:focus{
+    outline: none;
 }
 
 .mythic_items{
     display: grid;
     grid-template-rows: 70px;
+}
+
+.mythic_title{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 25px;
+    text-align: center;
+    color: #ccffff;
+    text-shadow: 5px 5px 5px#000000;
 }
 
 .mythic_items_icons img{
@@ -112,9 +123,11 @@ body{
 .mythic_items_icons{
     display: flex;
     flex-wrap: wrap;
+    height: fit-content;
 }
 
 .mythic_icon{
+    margin: 15px 15px;
     display: grid;
     grid-template-rows: 68px 20px;
     height: 88px;

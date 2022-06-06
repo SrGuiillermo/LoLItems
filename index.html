@@ -20,45 +20,47 @@
         <div class="stats_selector_rows">
             <div id="stats_selector_ad">
                 <ul>
-                    <li id="ad1"><img src="./assets/stats/ad.png">&nbsp;&nbsp;Attack Damage</li>
-                    <li><img src="./assets/stats/crit.png">&nbsp;&nbsp;Crit Chance</li>
-                    <li><img src="./assets/stats/attack_speed.png">&nbsp;&nbsp;Attack Speed</li>
-                    <li><img src="./assets/stats/armor_pen.png">&nbsp;&nbsp;Armon Penetration</li>
+                    <li id="ad_filter" onclick="filter_list('ad')"><img src="./assets/stats/ad.png">&nbsp;&nbsp;Attack Damage</li>
+                    <li id="crit_filter" onclick="filter_list('crit')"><img src="./assets/stats/crit.png">&nbsp;&nbsp;Crit Chance</li>
+                    <li id="as_filter" onclick="filter_list('as')"><img src="./assets/stats/attack_speed.png">&nbsp;&nbsp;Attack Speed</li>
+                    <li id="armor_pen_filter" onclick="filter_list('armor_pen')"><img src="./assets/stats/armor_pen.png">&nbsp;&nbsp;Armon Penetration</li>
+                    <li id="lethality_filter" onclick="filter_list('lethality')"><img src="./assets/stats/lethality.png">&nbsp;&nbsp;Lethality</li>
                 </ul>
             </div>
             <div id="stats_selector_ap">
                 <ul>
-                    <li><img src="./assets/stats/ap.png">&nbsp;&nbsp;Ability Power</li>
-                    <li><img src="./assets/stats/mana.png">&nbsp;&nbsp;Mana</li>
-                    <li><img src="./assets/stats/magic_pen.png">&nbsp;&nbsp;Magic Penetration</li>
+                    <li id="ap_filter" onclick="filter_list('ap')"><img src="./assets/stats/ap.png">&nbsp;&nbsp;Ability Power</li>
+                    <li id="mana_filter" onclick="filter_list('mana')"><img src="./assets/stats/mana.png">&nbsp;&nbsp;Mana</li>
+                    <li id="magic_pen_filter" onclick="filter_list('magic_pen')"><img src="./assets/stats/magic_pen.png">&nbsp;&nbsp;Magic Penetration</li>
                 </ul>
             </div>
             <div id="stats_selector_tank">
                 <ul>
-                    <li><img src="./assets/stats/hp.png">&nbsp;&nbsp;Health</li>
-                    <li><img src="./assets/stats/armor.png">&nbsp;&nbsp;Armor</li>
-                    <li><img src="./assets/stats/mr.png">&nbsp;&nbsp;Magic Resist</li>
+                    <li id="hp_filter" onclick="filter_list('hp')"><img src="./assets/stats/hp.png">&nbsp;&nbsp;Health</li>
+                    <li id="armor_filter" onclick="filter_list('armor')"><img src="./assets/stats/armor.png">&nbsp;&nbsp;Armor</li>
+                    <li id="mr_filter" onclick="filter_list('mr')"><img src="./assets/stats/mr.png">&nbsp;&nbsp;Magic Resist</li>
                 </ul>
             </div>
             <div id="stats_selector_msc">
                 <ul>
-                    <li><img src="./assets/stats/ah.png">&nbsp;Ability Haste</li>
-                    <li><img src="./assets/stats/move_speed.png">&nbsp;Move Speed</li>
-                    <li><img src="./assets/stats/vamp.png">&nbsp;Vamp</li>
+                    <li id="haste_filter" onclick="filter_list('haste')"><img src="./assets/stats/ah.png">&nbsp;&nbsp;Ability Haste</li>
+                    <li id="ms_filter" onclick="filter_list('ms')"><img src="./assets/stats/move_speed.png">&nbsp;&nbsp;Move Speed</li>
+                    <li id="omnivamp_filter" onclick="filter_list('omnivamp')"><img src="./assets/stats/omnivamp.png">&nbsp;&nbsp;Omnivamp</li>
+                    <li id="life_steal_filter" onclick="filter_list('life_steal')"><img src="./assets/stats/life_steal.png">&nbsp;&nbsp;Life Steal</li>
                 </ul>
             </div>
         </div>
     </div>
     <div class="items_column">
         <div class="search_bar">
-            <input type="text" placeholder="Search..." value>
+            <input type="text" placeholder="Search..." id="search_bar_in" onkeyup="search_bar_filter()">
         </div>
         <div class="roll_selector">
             Roll selector
         </div>
         <div class="mythic_items">
-            <div class="description">
-                Title
+            <div class="mythic_title">
+                Mythic Items
             </div>
             <div class="mythic_items_icons" id="gen_mythic"><script>generate_mythic_items()</script></div>
         </div>
