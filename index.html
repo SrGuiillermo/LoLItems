@@ -6,16 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LoL Items</title>
     <link href="style.css" rel="stylesheet">
+    <script type="text/javascript" src="./data/champions.js"></script>
+    <script type="text/javascript" src="./data/items.js"></script>
     <script type="text/javascript" src="./index.js"></script>
-    <script type="text/javascript" src="./items.js"></script>
-    <script type="text/javascript" src="./variables.js"></script>
 </head>
 <body>
     <div class="stats_selector">
         <div class="patch">
             <ul>
-                <li id="patch_title">PATCH: 12.10</li>
-                <li id="patch_notes"><a href="https://www.leagueoflegends.com/en-us/news/game-updates/patch-12-10-notes/" target="_blank">Patch notes</a></li>
+                <li id="patch_title">PATCH: 12.11</li>
+                <li id="patch_notes"><a href="https://www.leagueoflegends.com/en-us/news/game-updates/patch-12-11-notes/" target="_blank">Patch notes</a></li>
             </ul>
         </div>
         <div class="stats_selector_rows">
@@ -61,40 +61,44 @@
                 <div><img src="./assets/lol_classes/popular.png"></div>
                 <div class="roll_txt">Popular</div>
             </div>
-            <div class="roll" id="fighter_bund" onclick="class_filter(fighter_bund, 'fighter_bund')">
+            <div class="roll" id="bruiser" onclick="class_filter('bruiser')">
                 <div><img src="./assets/lol_classes/bruiser.png"></div>
                 <div class="roll_txt">Bruiser</div>
             </div>
-            <div class="roll" id="marksman_bund" onclick="class_filter(marksman_bund, 'marksman_bund')">
+            <div class="roll" id="marksman" onclick="class_filter('marksman')">
                 <div><img src="./assets/lol_classes/adc.png"></div>
                 <div class="roll_txt">Marksman</div>
             </div>
-            <div class="roll" id="assasin_bund" onclick="class_filter(assasin_bund, 'assasin_bund')">
+            <div class="roll" id="assasin" onclick="class_filter('assasin')">
                 <div><img src="./assets/lol_classes/assasin.png"></div>
                 <div class="roll_txt">Assasin</div>
             </div>
-            <div class="roll" id="mage_bund" onclick="class_filter(mage_bund, 'mage_bund')">
+            <div class="roll" id="mage" onclick="class_filter('mage')">
                 <div><img src="./assets/lol_classes/mage.png"></div>
                 <div class="roll_txt">Mage</div>
             </div>
-            <div class="roll" id="tank_bund" onclick="class_filter(tank_bund, 'tank_bund')">
+            <div class="roll" id="tank" onclick="class_filter('tank')">
                 <div><img src="./assets/lol_classes/tank.png"></div>
                 <div class="roll_txt">Tank</div>
             </div>
-            <div class="roll" id="support_bund" onclick="class_filter(support_bund, 'support_bund')">
+            <div class="roll" id="support" onclick="class_filter('support')">
                 <div><img src="./assets/lol_classes/support.png"></div>
                 <div class="roll_txt">Support</div>
             </div>
         </div>
         <div class="mythic_items">
-            <div class="mythic_title">
+            <div class="mythic_title" onclick="aaa()">
                 Mythic Items
             </div>
             <div class="mythic_items_icons" id="gen_mythic"><script>generate_mythic_items()</script></div>
         </div>
     </div>
     <div class="stats_display">
-
+        <div class="champion_selector">
+            <div id="champ" onclick="champion_select_toggle()">Champion
+                <div id="champion_dropdown"><script>generate_champions_dropdown()</script></div>
+            </div>
+        </div>
     </div> 
 </body>
 </html>

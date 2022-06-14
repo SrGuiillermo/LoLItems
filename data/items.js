@@ -1,3 +1,21 @@
+const stats_template = {
+    ad : "Attack Damage: ",
+    crit : "Critical Strike Chance: ",
+    as : "Attack Speed: ",
+    armor_pen : "Armor Penetration: ",
+    lethality : "Lethality: ",
+    ap : "Ability Power: ",
+    mana : "Mana: ",
+    magic_pen : "Magic Penetration: ",
+    hp : "Health: ",
+    armor : "Armor: ",
+    mr : "Magic Resist: ",
+    haste : "Ability Haste: ",
+    mana_regen : "Mana Regeneration: ",
+    ms : "Move Speed: ",
+    omnivamp : "Omnivamp: ",
+}
+
 const items = {
     mythic_items : {
         shurelyas_battlesong : {
@@ -8,7 +26,9 @@ const items = {
                 hp : 200,
                 haste : 20,
                 mana_regen : 1,
-            }
+            },
+            tank : true,
+            support : true,
         },
         
         evenshroud : {
@@ -19,7 +39,8 @@ const items = {
                 haste : 20,
                 armor : 30,
                 mr : 30,
-            }
+            },
+            support : true,
         },
         
         locket_of_the_iron_solari : {
@@ -30,7 +51,9 @@ const items = {
                 haste : 20,
                 armor : 30,
                 mr : 30,
-            }
+            },
+            tank : true,
+            support : true,
         },
         
         imperial_mandate : {
@@ -41,7 +64,8 @@ const items = {
                 hp : 200,
                 haste : 20,
                 mana_regen : 1,
-            }
+            },
+            support : true,
         },
         
         moonstone_renewer : {
@@ -52,7 +76,8 @@ const items = {
                 hp : 200,
                 haste : 20,
                 mana_regen : 1,
-            }
+            },
+            support : true,
         },
         
         crown_of_the_shattered_queen : {
@@ -63,7 +88,8 @@ const items = {
                 hp : 250,
                 mana : 600,
                 haste : 20,
-            }
+            },
+            mage : true,
         },
         
         everfrost : {
@@ -74,7 +100,8 @@ const items = {
                 hp : 250,
                 mana : 600,
                 haste : 20,
-            }
+            },
+            mage : true,
         },
         
         frostfire_gaunlet : {
@@ -85,7 +112,8 @@ const items = {
                 armor : 25,
                 mr : 25,
                 haste : 20,
-            }
+            },
+            tank : true,
         },
         
         turbo_chemtank : {
@@ -96,7 +124,8 @@ const items = {
                 armor : 25,
                 mr : 25,
                 haste : 20,
-            }
+            },
+            tank : true,
         },
         
         duskblade_of_draktharr : {
@@ -106,7 +135,8 @@ const items = {
                 ad : 60,
                 lethality : 18,
                 haste : 20,
-            }
+            },
+            assasin : true,
         },
         
         eclipse : {
@@ -116,7 +146,9 @@ const items = {
                 ad : 55,
                 lethality : 18,
                 omnivamp : 0.7
-            }
+            },
+            assasin : true,
+            bruiser : true,
         },
         
         prowlers_claw : {
@@ -126,7 +158,8 @@ const items = {
                 ad : 60,
                 lethality : 18,
                 haste : 20,
-            }
+            },
+            assasin : true,
         },
         
         sunfire_aegis : {
@@ -137,7 +170,8 @@ const items = {
                 armor : 35,
                 mr : 35,
                 haste : 20,
-            }
+            },
+            tank : true,
         },
         
         hextech_rocketbelt : {
@@ -148,7 +182,8 @@ const items = {
                 magic_pen : 6,
                 hp : 250,
                 haste : 15,
-            }
+            },
+            mage : true,
         },
         
         riftmaker : {
@@ -159,7 +194,8 @@ const items = {
                 hp : 300,
                 haste : 15,
                 omnivamp : 0.07,
-            }
+            },
+            mage : true,
         },
         
         night_harvester : {
@@ -169,7 +205,8 @@ const items = {
                 ap : 90,
                 hp : 300,
                 haste : 15,
-            }
+            },
+            mage : true,
         },
         
         liandrys_anguish : {
@@ -179,7 +216,8 @@ const items = {
                 ap : 80,
                 mana : 600,
                 haste : 20,
-            }
+            },
+            mage : true,
         },
         
         ludens_tempest : {
@@ -190,7 +228,8 @@ const items = {
                 magic_pen : 6,
                 mana : 600,
                 haste : 20,
-            }
+            },
+            mage : true
         },
         
         goredrinker : {
@@ -201,7 +240,8 @@ const items = {
                 hp : 300,
                 haste : 20,
                 omnivamp : 0.08,
-            }
+            },
+            bruiser : true,
         },
         
         stridebreaker : {
@@ -212,7 +252,8 @@ const items = {
                 as : 0.2,
                 hp : 300,
                 haste : 20,
-            }
+            },
+            bruiser : true,
         },
         
         divine_sunderer : {
@@ -222,7 +263,8 @@ const items = {
                 ad : 40,
                 hp : 300,
                 haste : 20,
-            }
+            },
+            bruiser : true,
         },
         
         trinity_force : {
@@ -233,7 +275,9 @@ const items = {
                 as : 0.3,
                 hp : 300,
                 haste : 20,
-            }
+            },
+            bruiser : true,
+            marksman : true,
         },
         
         galeforce : {
@@ -243,7 +287,8 @@ const items = {
                 ad : 60,
                 as : 0.2,
                 crit : 0.2,
-            }
+            },
+            marksman : true,
         },
         
         kraken_slayer : {
@@ -253,7 +298,8 @@ const items = {
                 ad : 65,
                 as : 0.25,
                 crit : 0.2,
-            }
+            },
+            marksman : true,
         },
         
         immortal_shieldbow : {
@@ -264,9 +310,10 @@ const items = {
                 as : 0.2,
                 crit : 0.2,
                 life_steal : 0.07,
-            }
+            },
+            marksman : true,
         },
 
 
-    }
+    },
 }

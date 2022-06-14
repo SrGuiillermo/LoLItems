@@ -8,13 +8,24 @@ html{
 body{
     display: grid;
     grid-template-columns: 300px 50% auto;
-    padding: 0px 100px;
+    padding: 0px 50px;
     grid-gap: 10px;
 }
 
+::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background: #888; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+  }
+
 .stats_selector{
     height: 100%;
-    padding: 30px 0px;
     display: grid;
 }
 
@@ -93,7 +104,7 @@ body{
 }
 
 #search_bar_in{
-    width: 100%;
+    width: 99%;
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: #0c1620;
@@ -139,8 +150,9 @@ body{
 }   
 
 .mythic_items{
+    height: fit-content;
     display: grid;
-    grid-template-rows: 70px;
+    grid-template-rows: 70px max-content;
 }
 
 .mythic_title{
@@ -175,4 +187,24 @@ body{
 
 .mythic_icon img:hover{
     cursor: pointer;
+}
+
+.champion_selector{
+    text-align: center;
+    width: 180px;
+    padding: 0px 216px;
+    font-family: 'Archivo Black', sans-serif;
+    color: #169C8E;
+}
+
+#champ{
+    cursor: pointer;
+}
+
+#champion_dropdown{
+    width: 180px;
+    display: none;
+    position:absolute;
+    overflow-y: auto;
+    max-height: 150px;
 }
